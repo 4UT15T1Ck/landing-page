@@ -1,0 +1,229 @@
+.home{
+    background-image: url(../img/bg0.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 0 25%;
+    height: fit-content;
+}
+.home-overlay{
+    width: 100%;
+    height: 150%;
+    padding: 80px 0px 60px 0px;
+    background-color: rgba(0, 0, 0, 0.408);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.introduction{
+    display: flex;
+    justify-items: flex-start; 
+    flex-direction: column;
+    width: 40%;
+    color: white;
+}
+.introduction i{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-45%, -50%);
+}
+.introduction h1{
+    font-weight: 800;
+    font-size: 45px;
+}
+.introduction h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    line-height: 1.6;
+}
+.introduction p{
+    font-size: 20px;
+    text-decoration: underline;
+    margin-top: 30px;
+    margin-left: 15px;
+    color: #FFF;
+}
+.introduction a{
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-color: #FFF;
+    color: #e52f37;
+    flex-shrink: 0;
+}
+.play-button-box{
+    position: relative;
+    display: flex;
+}
+
+.signup{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 40px 30px;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 5px;
+    height: fit-content;
+    width: 30%;
+    background-color: #FFF;
+}
+.text-bg{
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 40px;
+}
+.name{
+    background-image: url(../img/input-user.png);
+}
+.email{
+    background-image: url(../img/input-envelope.png);
+}
+.for{
+    background-image: url(../img/input-select.png);
+}
+.signup input{
+    font-size: 16px;
+    color:rgb(10, 10, 72);
+}
+.signup button{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e52f37;
+    color: white;
+    width: 100%;
+    padding: 18px 18px;
+    border: solid #e52f37 0.5px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0px;
+    transition: linear 0.3s;
+}
+.signup button:hover{
+    background-color: rgb(75, 178, 75);
+    border-color: rgb(58, 167, 58);
+}
+@media only screen and (max-width: 990px){
+    .home-overlay{
+        gap: 60px;
+    }
+    .signup{
+        width: 38%;
+    }
+    .introduction{
+        margin-right: 20px;
+        width: 40%;
+    }
+    .introduction h1{
+        font-size: 35px;
+    }
+    .introduction p{
+        font-size: 18px;
+        line-height: 1.4;
+    }
+}
+@media only screen and (max-width: 768px){
+    .home-overlay{
+        flex-direction: column;
+        justify-content: left;
+    }
+    .signup, .introduction{
+        width: 70%;
+    }
+}
+@keyframes Bounce {
+    0%
+    {
+        opacity: 0.2;
+        transform: scale(0);
+    }
+    20%
+    {
+        opacity: 0.4;
+        transform: scale(0.3);
+    }
+    40%
+    {
+        opacity: 0.6;
+        transform: scale(0.7);
+    }
+    60%
+    {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+    80%
+    {
+        opacity: 1;
+        transform: scale(0.9);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes play-button {
+    0%
+    {
+        height: 70px;
+        width: 70px;
+    }
+    20%
+    {
+        height: 77px;
+        width: 77px;
+    }
+    40%
+    {
+        height: 85px;
+        width: 85px;
+    }
+    60%
+    {
+        height: 85px;
+        width: 85px;        
+        opacity: 0.25;
+    }
+    80%
+    {
+        height: 85px;
+        width: 85px;
+        opacity: 0;
+    }
+    100%
+    {
+        height: 85px;
+        width: 85px;
+        opacity: 0; 
+    }
+}
+#play-button-ani{
+    border: 1.5px solid #fff;
+    position: absolute;
+    border-radius: 100%;
+    left: 35px;
+    top: 35px;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+    background-color:rgba(0, 0, 0, 0);
+    width: 70px;
+    height: 70px;
+    animation-name: play-button;
+    animation-duration: 1.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#Bounce-In{
+    animation-name: Bounce;
+    animation-duration: 1s;
+    animation-delay: 0.1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+}

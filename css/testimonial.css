@@ -1,0 +1,90 @@
+#Testimonial {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 10%;
+}
+.comment {
+    margin-top: 30px;
+    width: 30%;
+}
+.comment h1 {
+    font-weight: 900;
+}
+.rating-platform {
+    display: flex !important;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    gap: 10%;
+}
+.rating-container {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.rating-container p {
+    margin-top: 5px;
+    color: rgb(10, 10, 72);
+    font-weight: 700;
+    width: 100%;
+}
+.rating-container i {
+    color: #fdcc28;
+    margin: 2px 4px 2px 0px;
+}
+.employee-container {
+    width: 43%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    margin-left: 30px;
+}
+.employee {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    width: 100%;
+    border-left: 6px #27b36a solid;
+    height: fit-content;
+    background-color: #fff;
+    margin: 0px 0px 20px 0px;
+    box-shadow:1px 6px 10px rgba(0, 0, 0, 0.2);
+}
+.employee p{
+    margin: 25px 30px 10px 35px;
+    font-style: italic;
+}
+.employee button {
+    height: 109px;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-items: center !important;
+    border-radius: 0 !important;
+    border: none !important;
+    background-color: #fff !important;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+}
+.employee button:hover {
+    box-shadow: none;
+}
+.employee img {
+    width: 65px;
+    height: 65px;
+    margin: 22px 20px 22px 35px;
+    border-radius: 100%;
+    background-color: #fff !important;
+}
+.employee span {
+    color: #27b36a !important;
+    font-weight: 700 !important;
+    margin: 45px 0px !important;
+}
+.emp-name {
+    margin: 45px 0px !important;
+    font-family: "Nunito" !important;
+    font-weight: 700 !important;
+    color: rgb(10, 10, 72) !important;
+}
