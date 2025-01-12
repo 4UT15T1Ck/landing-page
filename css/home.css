@@ -13,13 +13,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
 }
 .introduction{
     display: flex;
+    align-self: center;
     justify-items: flex-start; 
     flex-direction: column;
     width: 40%;
+    max-width: 550px;
     color: white;
 }
 .introduction i{
@@ -47,12 +49,19 @@
 .introduction a{
     display: inline-block;
     position: relative;
+    box-sizing: border-box;
     width: 70px;
     height: 70px;
     border-radius: 100%;
     background-color: #FFF;
     color: #e52f37;
     flex-shrink: 0;
+    transition: all linear 0.2s;
+}
+.introduction a:hover{
+    background-color: transparent;
+    color: #FFF;
+    border: 2px solid #FFF;
 }
 .play-button-box{
     position: relative;
@@ -65,6 +74,7 @@
     box-sizing: border-box;
     padding: 40px 30px;
     flex-shrink: 0;
+    max-width: 510px;
     justify-content: flex-start;
     align-items: flex-start;
     border-radius: 5px;
@@ -134,9 +144,11 @@
     }
     .signup, .introduction{
         width: 70%;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 578px){
     .signup, .introduction{
         width: 90%;
     }

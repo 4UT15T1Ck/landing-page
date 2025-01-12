@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="./css/team.css" />
         <link rel="stylesheet" href="./css/price.css" />
         <link rel="stylesheet" href="./css/contact.css" />
+        <link rel="stylesheet" href="./css/display.css" />
         <link
             href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
             rel="stylesheet"
@@ -32,20 +33,50 @@
         />
     </head>
     <body>
-        <div class="navbar">
+        <div class="navbar" style="max-height: 90px;">
             <div class="container">
                 <button><a class="logo" href="#">LaunchPage</a></button>
+                <button onclick="collapse_panel_switch()" class="toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
                 <div class="nav-bar-collapse">
-                    <a href="#" class="nav-item">Home</a>
-                    <a href="#About" class="nav-item">About</a>
-                    <a href="#Testimonial" class="nav-item">Testimonials</a>
-                    <a href="#Work" class="nav-item">Work</a>
-                    <a href="#Team" class="nav-item">Team</a>
-                    <a href="#Feature" class="nav-item">Features</a>
-                    <a href="#Pricing" class="nav-item">Pricing</a>
-                    <a href="#Contact" class="get-started">Get Started</a>
+                    <a onclick="panel_collapse()" href="#" class="nav-item"
+                        >Home</a
+                    >
+                    <a onclick="panel_collapse()" href="#About" class="nav-item"
+                        >About</a
+                    >
+                    <a
+                        onclick="panel_collapse()"
+                        href="#Testimonial"
+                        class="nav-item"
+                        >Testimonials</a
+                    >
+                    <a onclick="panel_collapse()" href="#Work" class="nav-item"
+                        >Work</a
+                    >
+                    <a onclick="panel_collapse()" href="#Team" class="nav-item"
+                        >Team</a
+                    >
+                    <a
+                        onclick="panel_collapse()"
+                        href="#Feature"
+                        class="nav-item"
+                        >Features</a
+                    >
+                    <a
+                        onclick="panel_collapse()"
+                        href="#Pricing"
+                        class="nav-item"
+                        >Pricing</a
+                    >
+                    <a
+                        onclick="panel_collapse()"
+                        href="#Contact"
+                        class="get-started"
+                        >Get Started</a
+                    >
                 </div>
-                <button class="toggle"><i class="fa-solid fa-bars"></i></button>
             </div>
         </div>
         <div class="home" id="Home">
@@ -637,39 +668,35 @@
                 </div>
             </div>
         </div>
-        <div class="navbar">
-            <div class="footer">
-                <p class="foot-text">
-                    © 2020 <strong>LaunchPage</strong>. Designed by
-                    <a
-                        href="https://themeforest.net/user/epic-themes/portfolio?ref=Epic-Themes"
-                        >Epic-Theme</a
-                    >
-                </p>
-                <div class="footer-container">
-                    <p>Follow us: &nbsp</p>
-                    <i
-                        style="color: #4099ff"
-                        class="fa-brands fa-twitter fa-lg"
-                    ></i>
-                    <i
-                        style="color: #c92228"
-                        class="fa-brands fa-pinterest fa-lg"
-                    ></i>
-                    <i
-                        style="color: #3b5998"
-                        class="fa-brands fa-square-facebook fa-lg"
-                    ></i>
-                    <i
-                        style="color: #8a3ab9"
-                        class="fa-brands fa-instagram fa-lg"
-                    ></i>
-                    <i
-                        style="color: #1e90ff"
-                        class="fa-brands fa-skype fa-lg"
-                    ></i>
-                </div>
+        <div class="footer">
+            <p class="foot-text">
+                © 2020 <strong>LaunchPage</strong>. Designed by
+                <a
+                    href="https://themeforest.net/user/epic-themes/portfolio?ref=Epic-Themes"
+                    >Epic-Theme</a
+                >
+            </p>
+            <div class="footer-container">
+                <p>Follow us: &nbsp</p>
+                <i
+                    style="color: #4099ff"
+                    class="fa-brands fa-twitter fa-lg"
+                ></i>
+                <i
+                    style="color: #c92228"
+                    class="fa-brands fa-pinterest fa-lg"
+                ></i>
+                <i
+                    style="color: #3b5998"
+                    class="fa-brands fa-square-facebook fa-lg"
+                ></i>
+                <i
+                    style="color: #8a3ab9"
+                    class="fa-brands fa-instagram fa-lg"
+                ></i>
+                <i style="color: #1e90ff" class="fa-brands fa-skype fa-lg"></i>
             </div>
         </div>
     </body>
+    <script src="./js/main.js"></script>
 </html>
