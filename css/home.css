@@ -136,25 +136,30 @@
         width: 70%;
     }
 }
+@media only screen and (max-width: 768px){
+    .signup, .introduction{
+        width: 90%;
+    }
+}
 @keyframes Bounce {
     0%
     {
-        opacity: 0.2;
+        opacity: 0.3;
         transform: scale(0);
     }
     20%
     {
-        opacity: 0.4;
+        opacity: 0.6;
         transform: scale(0.3);
     }
     40%
     {
-        opacity: 0.6;
+        opacity: 0.9;
         transform: scale(0.7);
     }
     60%
     {
-        opacity: 0.8;
+        opacity: 1;
         transform: scale(1.1);
     }
     80%

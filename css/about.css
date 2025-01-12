@@ -180,6 +180,13 @@
     .list {
         max-width: 50%;
     }
+    .feature-container{
+        width: 80%;
+        gap: 6%;
+    }
+    .feature-item{
+        width: 47%;
+    }
 }
 @media only screen and (max-width: 768px) {
     .about-container {
@@ -190,6 +197,9 @@
     .about-item {
         width: 100%;
         text-align: center;
+    }
+    .query-box{
+        width: 90%;
     }
     .about-item p {
         box-sizing: border-box;
@@ -206,6 +216,26 @@
     }
     .list-item {
         margin-right: 10px !important;
+    }
+    .feature-container{
+        margin-left: 10%;
+    }
+    .feature-item{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 578px) {
+    .about-item p {
+        padding: 0;
+    }
+    .img-box,
+    .discover-about,
+    .list {
+        max-width: 90%;
+        margin: 0 5%;
+    }
+    .feature-item, .query-box{
+        width: 100%;
     }
 }
 @keyframes slide {
