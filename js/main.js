@@ -167,5 +167,7 @@ function Activate_animation() {
         }
     if (!bounce_array.length && !slide_array.length && !fade_array.length)
         window.removeEventListener("scroll", Activate_animation)
+    window.removeEventListener("load", Activate_animation)
 }
 window.addEventListener("scroll", Activate_animation);
+window.addEventListener("load", Activate_animation);
