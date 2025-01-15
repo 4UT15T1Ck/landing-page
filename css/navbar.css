@@ -1,8 +1,9 @@
 .navbar{
     box-sizing: border-box;
     position: sticky;
-    z-index: 1;
+    z-index: 9999;
     display: flex;
+    align-content: center;
     justify-content: center;
     justify-items: center;
     margin: 0;
@@ -18,21 +19,25 @@
     overflow: hidden;
     transition: all 0.3s ease-out;
 }
+.extend{
+    max-height: 400px !important;
+}
 .container, .footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 0px 20px;
+    flex-wrap: nowrap;
+    margin: 0;
+    box-sizing: border-box;
     padding: 0;
-    width: 75%; 
-    z-index: 1;   
+    width: 75%;
+    min-width: 900px; 
 }
 .footer{
     align-content: center;
     width: 100%;
     box-sizing: border-box;
-    padding: 0 15%;
+    padding: 0 12.5%;
     margin: 0;
 }
 .nav-item{
@@ -40,12 +45,13 @@
     font-size: 18px;
     transition: linear 0.3s;
 }
-.nav-item:hover{
+.nav-item:hover, .active{
     color: #e52f37;
 }
+
 .nav-bar-collapse{
     display: flex;
-    margin-top: 12px;
+    margin: 12px;
     justify-content: flex-end;
     align-items: center;
     transition: all 0.3s ease-out;
@@ -110,14 +116,22 @@
 .footer-container i{
     height: fit-content;
     margin: 26px 10px 10px 8px;
+    transition: all linear 0.2s;
 }
+.footer-container i:hover{
+    color: #e52f37 !important;
+}
+
 @media only screen and (max-width: 990px){
     .navbar{
         padding-left: 10px;
+        justify-content: center;
     }
     .container{
+        min-width: 0px;
         width: 90%;
         margin: 0px;
+        flex-wrap: wrap;
     }
     .nav-bar-collapse{
         width: 100%;
@@ -131,6 +145,7 @@
         display: block;
     }
     .footer{
+        min-width: 0px;
         flex-direction: column !important;
     }
 }

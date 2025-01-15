@@ -33,7 +33,7 @@
         />
     </head>
     <body>
-        <div class="navbar" style="max-height: 90px;">
+        <nav class="navbar">
             <div class="container">
                 <button><a class="logo" href="#">LaunchPage</a></button>
                 <button onclick="collapse_panel_switch()" class="toggle">
@@ -78,6 +78,23 @@
                     >
                 </div>
             </div>
+        </nav>
+        <div id="display-screen" class="display-bg stop-display">
+            <div class="display-box">
+                <iframe
+                    width="900"
+                    height="507"
+                    src="https://www.youtube.com/embed/FPfQMVf4vwQ"
+                    title="Meet your Google Assistant, your own personal Google"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
+                <button onclick="exit()" class="display-exit">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
         </div>
         <div class="home" id="Home">
             <div class="home-overlay">
@@ -90,33 +107,54 @@
                     </h4>
                     <div class="play-button-box">
                         <div id="play-button-ani"></div>
-                        <a href=""><i class="fa-solid fa-play fa-2x"></i></a>
+                        <a onclick="play_video()"
+                            ><i class="fa-solid fa-play fa-2x"></i
+                        ></a>
                         <p>Watch Presentation Video</p>
                     </div>
                 </div>
-                <div class="signup" id="Bounce-In">
+                <form
+                    name="sign-up"
+                    class="signup"
+                    id="Ani1"
+                    onsubmit="submit_noti(1)"
+                >
                     <h3>Get Your Free 14-Day Trial</h3>
                     <p>Lorem ipsum dolor sit amet consectetur.</p>
                     <input
                         class="text-bg name"
                         type="text"
+                        name="comp_name"
+                        required
                         placeholder="Company Name*"
                     />
                     <input
                         class="text-bg email"
-                        type="text"
+                        type="email"
+                        name="daEmail"
+                        required
                         placeholder="Email Address*"
                     />
-                    <select class="text-bg for" , name="" id="">
-                        <option value="">We need LaunchPage for...</option>
-                        <option value="">Our Support Team</option>
-                        <option value="">Our Sale Department</option>
+                    <select
+                        class="text-bg for"
+                        ,
+                        name="purpose"
+                        required
+                        id="purpose-selector"
+                    >
+                        <option value="1">We need LaunchPage for...</option>
+                        <option value="2">Our Support Team</option>
+                        <option value="3">Our Sale Department</option>
                     </select>
-                    <button>START MY 14-DAY FREE TRIAL</button>
+                    <button type="submit">START MY 14-DAY FREE TRIAL</button>
+                    <p class="input-success-noti green-noti stop-display">
+                        We received your message and you will hear from us soon.
+                        Thank You!
+                    </p>
                     <p style="font-size: 15px">
                         No Credit Card • No Installation Required
                     </p>
-                </div>
+                </form>
             </div>
         </div>
         <div class="award-container">
@@ -126,6 +164,7 @@
             <img class="award" src="./img/award3a.png" alt="pic" />
             <img class="award" , src="./img/award1a.png" alt="pic" />
         </div>
+
         <div id="About" class="about">
             <div class="what-we-do">
                 <h1 style="font-weight: 700">What We Do</h1>
@@ -168,7 +207,7 @@
             </div>
         </div>
         <div class="about expand">
-            <div id="slide-in" class="img-box">
+        <div id="Ani3" class="img-box" style="transform: translateX(-150%);">
                 <img src="./img/about001.jpg" alt="pic" />
             </div>
             <div class="discover-about">
@@ -199,7 +238,7 @@
         </div>
         <div style="background-color: aliceblue" class="about expand">
             <div class="list">
-                <button class="list-item">
+                <button onclick="About_IMG (1)" class="list-item">
                     <i
                         style="color: #1e90ff"
                         class="fa-solid fa-chart-line fa-2x"
@@ -212,7 +251,7 @@
                         </p>
                     </div>
                 </button>
-                <button class="list-item">
+                <button onclick="About_IMG (2)" class="list-item">
                     <i
                         style="color: #e52f37; padding: 18px"
                         class="fa-solid fa-network-wired fa-2x"
@@ -225,7 +264,7 @@
                         </p>
                     </div>
                 </button>
-                <button class="list-item">
+                <button onclick="About_IMG (3)" class="list-item">
                     <i
                         style="color: #27b36a"
                         class="fa-solid fa-rocket fa-2x"
@@ -240,7 +279,7 @@
                 </button>
             </div>
             <div class="img-box">
-                <img src="./img/about1.jpg" alt="pic" />
+                <img id="right-here" src="./img/about1.jpg" alt="pic" />
             </div>
         </div>
         <div class="section-bg-1">
@@ -306,7 +345,12 @@
             </div>
             <div class="employee-container">
                 <div class="employee">
-                    <button>
+                    <button onclick="dis_emp_mess (0)">
+                        <p class="employee-message">
+                            Lorem ipsum dolor sit amet consec tetur adipis icing
+                            elit. Cupid itate eveniet laborum deserunt modi
+                            aliquid assumenda itaque veniam ratione?
+                        </p>
                         <img src="./img/testimonials3.jpg" alt="pic" />
                         <div class="employee-text">
                             <p class="emp-name">
@@ -317,7 +361,12 @@
                     </button>
                 </div>
                 <div class="employee">
-                    <button>
+                    <button onclick="dis_emp_mess (1)">
+                        <p class="employee-message">
+                            Lorem ipsum dolor sit amet consec tetur adipis icing
+                            elit. Cupid itate eveniet laborum deserunt modi
+                            aliquid assumenda itaque veniam ratione?
+                        </p>
                         <img src="./img/testimonials2.jpg" alt="pic" />
                         <div class="employee-text">
                             <p class="emp-name">
@@ -327,7 +376,12 @@
                     </button>
                 </div>
                 <div class="employee">
-                    <button>
+                    <button onclick="dis_emp_mess (2)">
+                        <p class="employee-message">
+                            Lorem ipsum dolor sit amet consec tetur adipis icing
+                            elit. Cupid itate eveniet laborum deserunt modi
+                            aliquid assumenda itaque veniam ratione?
+                        </p>
                         <img src="./img/testimonials1.jpg" alt="pic" />
                         <div class="employee-text">
                             <p class="emp-name">
@@ -339,6 +393,25 @@
                 </div>
             </div>
         </div>
+        <div id="slider" class="display-bg stop-display">
+            <div class="display-box">
+                <img class="stop-display" src="./img/gallery1.jpg" alt="pic" />
+                <img class="stop-display" src="./img/gallery2.jpg" alt="pic" />
+                <img class="stop-display" src="./img/gallery3.jpg" alt="pic" />
+                <img class="stop-display" src="./img/gallery4.jpg" alt="pic" />
+                <img class="stop-display" src="./img/gallery5.jpg" alt="pic" />
+                <button onclick="quitSlider()" class="display-exit">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <p class="counter"></p>
+            </div>
+            <div class="to previous" onclick="previous_img()">
+                <i class="fa-solid fa-caret-left fa-3x"></i>
+            </div>
+            <div class="to next" onclick="next_img()">
+                <i class="fa-solid fa-caret-right fa-3x"></i>
+            </div>
+        </div>
         <div id="Work" class="Portfolio">
             <div class="Portfolio-head">
                 <h1>Our Portfolio</h1>
@@ -346,14 +419,14 @@
                     Dicover the latest projects accomplished for my clients.
                 </p>
             </div>
-            <div id="fade-in" class="col-1">
-                <div class="p-img-box row-1">
+            <div id="Ani2" class="col-1">
+                <div class="p-img-box row-1" onclick="showSlider(0)">
                     <img src="./img/gallery1.jpg" alt="pic" />
                     <div class="img-cover">
                         <i class="fa-solid fa-magnifying-glass fa-2x"></i>
                     </div>
                 </div>
-                <div class="p-img-box row-2">
+                <div class="p-img-box row-2" onclick="showSlider(1)">
                     <img src="./img/gallery2.jpg" alt="pic" />
                     <div class="img-cover">
                         <i class="fa-solid fa-magnifying-glass fa-2x"></i>
@@ -361,22 +434,22 @@
                 </div>
             </div>
             <div class="row-3">
-                <div id="fade-in" class="col-1">
-                    <div class="p-img-box">
+                <div id="Ani2" class="col-1">
+                    <div class="p-img-box" onclick="showSlider(2)">
                         <img src="./img/gallery3.jpg" alt="pic" />
                         <div class="img-cover">
                             <i class="fa-solid fa-magnifying-glass fa-2x"></i>
                         </div>
                     </div>
                 </div>
-                <div id="fade-in" class="col-2">
-                    <div class="p-img-box row-1">
+                <div id="Ani2" class="col-2">
+                    <div class="p-img-box row-1" onclick="showSlider(3)">
                         <img src="./img/gallery4.jpg" alt="pic" />
                         <div class="img-cover">
                             <i class="fa-solid fa-magnifying-glass fa-2x"></i>
                         </div>
                     </div>
-                    <div class="p-img-box row-2">
+                    <div class="p-img-box row-2" onclick="showSlider(4)">
                         <img src="./img/gallery5.jpg" alt="pic" />
                         <div class="img-cover">
                             <i class="fa-solid fa-magnifying-glass fa-2x"></i>
@@ -448,7 +521,7 @@
                 </p>
             </div>
             <div class="feature-container">
-                <div id="fade-in" class="feature-item">
+                <div id="Ani2" class="feature-item">
                     <i
                         style="color: #a9d129"
                         class="fa-solid fa-screwdriver-wrench"
@@ -462,8 +535,7 @@
                     </div>
                 </div>
                 <div
-                    id="fade-in"
-                    style="animation-delay: 0.5s"
+                    id="Ani2"
                     class="feature-item"
                 >
                     <i
@@ -479,8 +551,7 @@
                     </div>
                 </div>
                 <div
-                    id="fade-in"
-                    style="animation-delay: 1s"
+                    id="Ani2"
                     class="feature-item"
                 >
                     <i style="color: #fe9c24" class="fa-regular fa-bell"></i>
@@ -493,8 +564,7 @@
                     </div>
                 </div>
                 <div
-                    id="fade-in"
-                    style="animation-delay: 1.5s"
+                    id="Ani2"
                     class="feature-item"
                 >
                     <i style="color: #3473b8" class="fa-solid fa-gift"></i>
@@ -507,8 +577,7 @@
                     </div>
                 </div>
                 <div
-                    id="fade-in"
-                    style="animation-delay: 2s"
+                    id="Ani2"
                     class="feature-item"
                 >
                     <i
@@ -524,8 +593,7 @@
                     </div>
                 </div>
                 <div
-                    id="fade-in"
-                    style="animation-delay: 2.5s"
+                    id="Ani2"
                     class="feature-item"
                 >
                     <i
@@ -555,7 +623,7 @@
                 </p>
             </div>
             <div class="price-card-container">
-                <div id="Bounce-In" class="price-card white">
+                <div id="Ani1" class="price-card white">
                     <p class="price-title">MONTHLY</p>
                     <p class="price-value">$19</p>
                     <p class="price-subtitle">Per Month</p>
@@ -564,8 +632,7 @@
                     <p>Amazing freatures.</p>
                 </div>
                 <div
-                    id="Bounce-In"
-                    style="animation-delay: 0.2s"
+                    id="Ani1"
                     class="price-card red"
                 >
                     <p class="price-title">YEARLY</p>
@@ -630,16 +697,25 @@
                     <h1>Contact Us</h1>
                     <p>Have any queries? Get in touch today.</p>
                 </div>
-                <div id="Bounce-In" class="contact-grid">
+                <form
+                    id="Ani1"
+                    class="contact-grid"
+                    name="contact-form"
+                    onsubmit="submit_noti(2)"
+                >
                     <div class="c-row-1">
                         <input
                             class="c-col-1"
                             type="text"
+                            name="kiminonawa"
+                            required
                             placeholder="Your Name*"
                         />
                         <input
                             class="c-col-2"
-                            type="text"
+                            type="email"
+                            name="urEmail"
+                            required
                             placeholder="Email Address*"
                         />
                     </div>
@@ -647,9 +723,16 @@
                         <input
                             class="c-col-1"
                             type="text"
+                            name="fonNumba"
+                            required
                             placeholder="Phone Number*"
                         />
-                        <select class="c-col-2" name="" id="">
+                        <select
+                            class="c-col-2"
+                            name="wut_cha_opt"
+                            required
+                            id="option"
+                        >
                             <option value="">Choose Option</option>
                             <option value="">Individual</option>
                             <option value="">Corporate</option>
@@ -663,9 +746,13 @@
                         ></textarea>
                     </div>
                     <div class="c-row-4">
-                        <button>GET IN TOUCH</button>
+                        <button type="submit">GET IN TOUCH</button>
                     </div>
-                </div>
+                    <p class="input-success-noti c-row-5 stop-display">
+                        We received your message and you will hear from us soon.
+                        Thank You!
+                    </p>
+                </form>
             </div>
         </div>
         <div class="footer">

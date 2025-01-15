@@ -172,6 +172,7 @@
 .list-item:hover,
 .list-item:focus {
     background-color: #fff !important;
+    box-shadow: 5px 5px 60px rgba(0, 0, 0, 0.01) !important;
 }
 @media only screen and (max-width: 990px) {
     .about-item {
@@ -266,7 +267,10 @@
 }
 #slide-in {
     animation-name: slide;
+    animation-delay: 0.5s;
     animation-duration: 0.6s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
+
